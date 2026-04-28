@@ -14,6 +14,7 @@ Before running a release:
 - `origin` must point to `calumba/herold-cli`
 - npm must already be authenticated (`npm whoami` should work)
 - the working tree must be clean
+- the current branch must be `main`
 
 The release script aborts early if any of these checks fail.
 

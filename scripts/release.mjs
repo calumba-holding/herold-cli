@@ -46,9 +46,18 @@ function ensureNpmAuth() {
   }
 }
 
+function ensureMainBranch() {
+  const branch = capture('git', ['branch', '--show-current']);
+  if (branch !== 'main') {
+    console.error(`Release aborted: releases are only allowed from "main". Current branch: "${branch}".`);
+    process.exit(1);
+  }
+}
+
 ensureCleanTree();
 ensureOriginRemote();
 ensureNpmAuth();
+ensureMainBranch();
 
 run('node', ['scripts/update-changelog.mjs']);
 run('pnpm', ['lint']);

@@ -80,4 +80,4 @@ pnpm release:minor
 pnpm release:major
 ```
 
-The release script requires a clean git tree, updates `CHANGELOG.md`, runs the quality gates, bumps `package.json`, finalizes the changelog into the released version section, creates a matching release commit and git tag, pushes branch and tag to `origin`, and then runs `npm publish --access public`.
+The release script requires a clean git tree, an `origin` remote, npm auth, and the current branch to be `main`. It updates `CHANGELOG.md`, runs the quality gates, bumps `package.json`, finalizes the changelog into the released version section, creates a matching release commit and git tag, pushes branch and tag to `origin`, and then runs `npm publish --access public`.
