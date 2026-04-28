@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calumba/herold-cli.git"
+    "url": "git+https://github.com/calumba-holding/herold-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/calumba/herold-cli/issues"
+    "url": "https://github.com/calumba-holding/herold-cli/issues"
   },
-  "homepage": "https://github.com/calumba/herold-cli#readme",
+  "homepage": "https://github.com/calumba-holding/herold-cli#readme",
   "keywords": [
     "herold",
     "cli",

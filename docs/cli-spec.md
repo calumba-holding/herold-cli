@@ -3,7 +3,7 @@
 ## Name
 
 - npm package: `@calumba/herold-cli`
-- Repository: `calumba/herold-cli`
+- Repository: `calumba-holding/herold-cli`
 - Binary: `herold`
 - Skills: `herold-cli`, `extend-herold-cli`
 
