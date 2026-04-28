@@ -54,10 +54,20 @@ function ensureMainBranch() {
   }
 }
 
+function ensureRemoteAccessible() {
+  try {
+    execFileSync('git', ['ls-remote', '--heads', 'origin'], { stdio: 'ignore' });
+  } catch {
+    console.error('Release aborted: remote "origin" is not accessible. Verify repository existence and push permissions.');
+    process.exit(1);
+  }
+}
+
 ensureCleanTree();
 ensureOriginRemote();
 ensureNpmAuth();
 ensureMainBranch();
+ensureRemoteAccessible();
 
 run('node', ['scripts/update-changelog.mjs']);
 run('pnpm', ['lint']);

@@ -15,6 +15,7 @@ Before running a release:
 - npm must already be authenticated (`npm whoami` should work)
 - the working tree must be clean
 - the current branch must be `main`
+- the `origin` remote must be reachable with your current credentials
 
 The release script aborts early if any of these checks fail.
 

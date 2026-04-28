@@ -25,6 +25,6 @@ pnpm release:minor
 pnpm release:major
 ```
 
-Der Release-Script prüft zuerst sauberen Git-Status, `origin`-Remote, npm-Login und dass du auf `main` bist, aktualisiert dann den Changelog, führt Linting, Typecheck, Tests, Build und `npm pack --dry-run` aus, bumped danach die Version, finalisiert den Changelog für die neue Version, pusht Branch und Tag zu `origin` und veröffentlicht anschließend das öffentliche npm-Paket.
+Der Release-Script prüft zuerst sauberen Git-Status, `origin`-Remote, npm-Login, dass du auf `main` bist, und ob das Remote wirklich erreichbar ist. Danach aktualisiert er den Changelog, führt Linting, Typecheck, Tests, Build und `npm pack --dry-run` aus, bumped danach die Version, finalisiert den Changelog für die neue Version, pusht Branch und Tag zu `origin` und veröffentlicht anschließend das öffentliche npm-Paket.
 
 Weitere Details: [`docs/README.md`](docs/README.md), [`docs/cli-spec.md`](docs/cli-spec.md) und [`docs/releasing.md`](docs/releasing.md).
