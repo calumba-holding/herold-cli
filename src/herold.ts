@@ -45,7 +45,7 @@ export async function searchHerold(query: SearchQuery, fetchImpl: typeof fetch =
   const response = await fetchImpl(sourceUrl, {
     headers: {
       'accept': 'text/html,application/xhtml+xml',
-      'user-agent': 'herold-cli/0.1 (+https://github.com/pasogott/herold-cli)',
+      'user-agent': 'herold-cli/0.1 (+https://github.com/calumba/herold-cli)',
     },
   });
   if (!response.ok && response.status !== 404) {
@@ -80,7 +80,7 @@ async function searchFirmByName(query: SearchQuery, fetchImpl: typeof fetch): Pr
     const response = await fetchImpl(url, {
       headers: {
         accept: 'text/html,application/xhtml+xml',
-        'user-agent': 'herold-cli/0.1 (+https://github.com/pasogott/herold-cli)',
+        'user-agent': 'herold-cli/0.1 (+https://github.com/calumba/herold-cli)',
       },
     });
     if (!response.ok) continue;

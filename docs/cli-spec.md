@@ -2,7 +2,8 @@
 
 ## Name
 
-- Repository/package: `herold-cli`
+- npm package: `@calumba/herold-cli`
+- Repository: `calumba/herold-cli`
 - Binary: `herold`
 - Skills: `herold-cli`, `extend-herold-cli`
 
@@ -68,3 +69,15 @@ node dist/bin.js --help
 node dist/bin.js --version
 npm pack --dry-run
 ```
+
+## Release workflow
+
+Public npm releases are executed locally via:
+
+```bash
+pnpm release:patch
+pnpm release:minor
+pnpm release:major
+```
+
+The release script requires a clean git tree, updates `CHANGELOG.md`, runs the quality gates, bumps `package.json`, finalizes the changelog into the released version section, creates a matching release commit and git tag, pushes branch and tag to `origin`, and then runs `npm publish --access public`.

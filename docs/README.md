@@ -2,6 +2,7 @@
 
 - [`cli-spec.md`](cli-spec.md) — öffentlicher CLI-Vertrag: Befehle, Flags, Ausgabe, Exit-Codes.
 - [`architecture.md`](architecture.md) — interne Struktur und Wartungshinweise.
+- [`releasing.md`](releasing.md) — Versioning-, Git- und npm-Release-Ablauf.
 
 ## Ziel
 

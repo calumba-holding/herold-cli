@@ -1,5 +1,5 @@
 {
-  "name": "herold-cli",
+  "name": "@calumba/herold-cli",
   "version": "0.1.0",
   "description": "CLI for Herold.at firm and person search.",
   "type": "module",
@@ -11,14 +11,36 @@
     "docs",
     ".agents/skills",
     "README.md",
+    "CHANGELOG.md",
     "AGENTS.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calumba/herold-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/calumba/herold-cli/issues"
+  },
+  "homepage": "https://github.com/calumba/herold-cli#readme",
+  "keywords": [
+    "herold",
+    "cli",
+    "search",
+    "yellow-pages",
+    "austria"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsx src/bin.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "release:patch": "node scripts/release.mjs patch",
+    "release:minor": "node scripts/release.mjs minor",
+    "release:major": "node scripts/release.mjs major"
   },
   "dependencies": {},
   "devDependencies": {

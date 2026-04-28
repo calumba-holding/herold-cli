@@ -2,6 +2,8 @@
 
 Use this skill when using the `herold` CLI for Herold.at firm or person search.
 
+npm package: `@calumba/herold-cli`
+
 ## Read first
 
 - `../../../docs/cli-spec.md`

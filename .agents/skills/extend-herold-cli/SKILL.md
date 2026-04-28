@@ -7,6 +7,7 @@ Use this skill before changing or extending `herold-cli`.
 - `../../../docs/cli-spec.md`
 - `../../../docs/architecture.md`
 - `../../../AGENTS.md`
+- `../../../docs/releasing.md`
 
 ## Hard rules
 
@@ -23,4 +24,5 @@ pnpm test
 pnpm build
 node dist/bin.js --help
 node dist/bin.js --version
+npm pack --dry-run
 ```
