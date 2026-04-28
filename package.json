@@ -1,0 +1,36 @@
+{
+  "name": "herold-cli",
+  "version": "0.1.0",
+  "description": "CLI for Herold.at firm and person search.",
+  "type": "module",
+  "bin": {
+    "herold": "dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    ".agents/skills",
+    "README.md",
+    "AGENTS.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/bin.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "tsx": "latest",
+    "vitest": "latest"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
