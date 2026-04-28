@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.4.0 - 2026-04-28
+
+- Fixed Preflight remote access.
 ## 0.3.0 - 2026-04-28
 
 - Fixed Point repository metadata to calumba-holding.
