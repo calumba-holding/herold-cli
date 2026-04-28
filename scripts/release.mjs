@@ -29,7 +29,26 @@ function ensureCleanTree() {
   }
 }
 
+function ensureOriginRemote() {
+  const remotes = capture('git', ['remote'], true);
+  if (!remotes.split('\n').includes('origin')) {
+    console.error('Release aborted: git remote "origin" is not configured.');
+    process.exit(1);
+  }
+}
+
+function ensureNpmAuth() {
+  try {
+    execFileSync('npm', ['whoami'], { stdio: 'ignore' });
+  } catch {
+    console.error('Release aborted: npm auth missing. Run "npm whoami" or "npm login" first.');
+    process.exit(1);
+  }
+}
+
 ensureCleanTree();
+ensureOriginRemote();
+ensureNpmAuth();
 
 run('node', ['scripts/update-changelog.mjs']);
 run('pnpm', ['lint']);

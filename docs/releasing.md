@@ -15,6 +15,8 @@ Before running a release:
 - npm must already be authenticated (`npm whoami` should work)
 - the working tree must be clean
 
+The release script aborts early if any of these checks fail.
+
 ## Commands
 
 ```bash
